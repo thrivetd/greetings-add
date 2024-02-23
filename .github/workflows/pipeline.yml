@@ -71,7 +71,7 @@ jobs:
     # NOTE: The Gradle Wrapper is the default and recommended way to run Gradle (https://docs.gradle.org/current/userguide/gradle_wrapper.html).
     # If your project does not have the Gradle Wrapper configured, you can use the following configuration to run Gradle with a specified version.
     #
-    # - name: Setup Gradle
+    # - name: Setup Gradle test
     #   uses: gradle/actions/setup-gradle@417ae3ccd767c252f5661f1ace9f835f9654f2b5 # v3.1.0
     #   with:
     #     gradle-version: '8.5'
@@ -107,7 +107,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - id: report-count
-      uses: <your github userid>/arg-count-action@main
+      uses: thrivetd/arg-count-action@main
       with:
         arguments-to-count: ${{ github.event.inputs.myValues }}
     - run: echo
